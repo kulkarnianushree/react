@@ -1,10 +1,11 @@
 import "./Expenses.css";
 import ExpenseItem from "./ExpenseItem";
+import Card from "./Card";
 
 function Expenses(props) {
   console.log(props.expenses)
   return (
-    <div className="expenses">
+    <Card className="expenses">
       {props.expenses.map((expense, index) => (
         <ExpenseItem
           key={expense.id}
@@ -13,7 +14,7 @@ function Expenses(props) {
           price={expense.price}
         />
       ))}
-    </div>
+    </Card>
   );
 }
 
