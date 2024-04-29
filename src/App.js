@@ -1,6 +1,6 @@
-
+import React from "react";
 import Expenses from "./component/Expenses";
-
+import NewExpense from "./component/NewExpense/NewExpense";
 const expenses = [
   {id:1,date:new Date(2023,7,15),title:"Insurance",price:100},
   {id:2,date: new Date(2023,3,25),title:"Book",price:10},
@@ -12,9 +12,10 @@ function App() {
 
   return (
     <div>
-      <h2>Let's get Started</h2>
+      <NewExpense />
       <Expenses expenses = {expenses}></Expenses>
-        
+      
+
     
     </div>
   );
