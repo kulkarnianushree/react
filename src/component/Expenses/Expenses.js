@@ -3,7 +3,7 @@ import ExpenseItem from "./ExpenseItem";
 import ExpenseFilter from "./ExpenseFilter";
 import Card from "../../UI/Card";
 import React, { useState } from "react";
-
+import ExpenseChart from "./ExpenseChart";
 const Expenses = (props) => {
   const [filteredYear, setFilteredYear] = useState("2023");
   const changeFilterHandler = (selectedYear) => {
@@ -32,6 +32,7 @@ const Expenses = (props) => {
       {filteredExpenses.length === 1 && (
         <p>Only one expense found. Please add more</p>
       )}
+      <ExpenseChart chartData={filteredExpenses}/>
       {expenseContent}
     </Card>
   );
